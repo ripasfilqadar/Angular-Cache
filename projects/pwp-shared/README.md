@@ -1,4 +1,4 @@
-# Pwp Pipe Shared
+# Pwp Shared Module
 
 > Pwp Shared Module is collections of pipe for help you to build application ongular
 
@@ -11,12 +11,13 @@
 ```bash
 npm i pwp-shared
 ```
+## Pipes Libraries
 
-## Usage
+### Usage
 Import `PwpSharedModule` on your apps module
 
 
-## List Of Pipe
+### List Of Pipe
 - **DatePipeCustom**
 convert date to string with month on bahasa, ex: `2019-02-03T09:01:32.607` became `03 Februari 2019`  for long date and `03 Feb 2019` for short date
 - **TruncatePipe**
@@ -25,6 +26,23 @@ truncate your string, default is 150 char
 Remove html tag
 - **SafeHtmlPipe**
 For safe html(inner html)
+
+## Pagination Module
+
+Pagination component
+
+### Usage
+Import `PaginationModule`
+
+### API
+
+| Name        | Descripstion           |
+| ------------- |:-------------:|
+| @Input() offset(0): number      | Page Number or offset pagination |
+| @Input() limit(20): number      | Limit for content pagination |
+| @Input() totalData(0): number      | Total of data |
+| @Input() currentPage(1): number      | Current Page |
+| @Ouput() paginationClick(): void      | Triggered when page changing |
 
 
 ## License

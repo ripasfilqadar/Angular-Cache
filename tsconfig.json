@@ -30,6 +30,12 @@
       ],
       "pwp-shared/*": [
         "dist/pwp-shared/*"
+      ],
+      "pagination": [
+        "dist/pagination"
+      ],
+      "pagination/*": [
+        "dist/pagination/*"
       ]
     }
   }

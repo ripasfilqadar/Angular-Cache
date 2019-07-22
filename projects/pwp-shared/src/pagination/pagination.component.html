@@ -1,0 +1,15 @@
+<div class="row col s12">
+  <ul *ngIf="totalData > limit" class="pagination" style="display: block; width: fit-content; margin: auto !important">
+    <li [ngClass]="{disabled:currentPage === 1}">
+      <a (click)="onPaginationClick(minData - 1)"><i
+          class="material-icons remove-background pagination-row">chevron_left</i></a>
+    </li>
+    <li *ngFor="let page of numbersPage()" [ngClass]="{active: currentPage === page}">
+      <a (click)="onPaginationClick(page)" class="remove-background">{{page}}</a>
+    </li>
+    <li [ngClass]="{disabled:currentPage === totalPages()}">
+      <a (click)="onPaginationClick(maxData + 1)"><i
+          class="material-icons remove-background pagination-row">chevron_right</i></a>
+    </li>
+  </ul>
+</div>
