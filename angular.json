@@ -168,6 +168,41 @@
           }
         }
       }
+    },
+    "pwp-shared": {
+      "root": "projects/pwp-shared",
+      "sourceRoot": "projects/pwp-shared/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/pwp-shared/tsconfig.lib.json",
+            "project": "projects/pwp-shared/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/pwp-shared/src/test.ts",
+            "tsConfig": "projects/pwp-shared/tsconfig.spec.json",
+            "karmaConfig": "projects/pwp-shared/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/pwp-shared/tsconfig.lib.json",
+              "projects/pwp-shared/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "cache-library"

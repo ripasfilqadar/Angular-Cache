@@ -24,6 +24,12 @@
       ],
       "angular-cache/*": [
         "dist/angular-cache/*"
+      ],
+      "pwp-shared": [
+        "dist/pwp-shared"
+      ],
+      "pwp-shared/*": [
+        "dist/pwp-shared/*"
       ]
     }
   }
