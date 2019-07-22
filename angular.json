@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "angular-cache": {
+      "root": "projects/angular-cache",
+      "sourceRoot": "projects/angular-cache/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/angular-cache/tsconfig.lib.json",
+            "project": "projects/angular-cache/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/angular-cache/src/test.ts",
+            "tsConfig": "projects/angular-cache/tsconfig.spec.json",
+            "karmaConfig": "projects/angular-cache/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/angular-cache/tsconfig.lib.json",
+              "projects/angular-cache/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "cache-library"
